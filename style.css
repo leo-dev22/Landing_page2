@@ -1,0 +1,126 @@
+*{
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+body{
+  overflow: hidden;
+  font-family: 'montserrat',sans-serif;
+}
+nav{
+  width: 100%;
+  background: #000;
+  height: 4.6rem;
+  text-transform: uppercase;
+  font-size: .8rem;
+  display: grid;
+  place-items: center;
+}
+nav .container{
+  background: crimson;
+  width: 86%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a{
+  color: #fff;
+  transition: all .3s ease;
+}
+a:hover{
+  color: rgb(57, 248, 9);
+}
+nav h2{
+  color:rgb(57, 248, 9); ;
+}
+nav ul{
+  display: flex;
+  gap:2rem;
+}
+nav .sign-link{
+  display: flex;
+  align-items: center;
+}
+.btn{
+  padding: .8rem 2rem;
+  border-radius: 2rem;
+  border: 1px solid black;
+}
+.btn:hover{
+ box-shadow: 0 1rem rgba(255,72, 0,.4);
+}
+.btn-primary{
+  background: coral;
+  border: none;
+}
+.btn-primary:hover{
+  color: white;
+  background: #000;
+}
+
+
+/* -============*/
+section{
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  height:calc(100vh - 4.6rem)
+}
+section .left{
+  display: grid;
+  place-items: center;
+}
+section .left .content{
+  width:60%;
+}
+section .left h1{
+  font-size: 3.6rem;
+  line-height: 1.1;
+}
+section .left .cta{
+  margin-top: 5rem;
+}
+section .left .cta a{
+  padding: 1.2rem 2rem;
+}
+section .left .cta a:last-child{
+  color: black;
+  margin-left: 1.2rem;
+}
+section .right{
+  position: relative;
+}
+section .right .outer-circle{
+  width: 100rem;
+  height: 100rem;
+  background: #ff4800;
+  display:grid;
+  place-items: center;
+  position: absolute;
+  top: -5rem;
+  animation:animateOuterCircle 15s ease infinite ;
+}
+/* for animation */
+@keyframes animateOuterCircle {
+  to{
+    filter: hue-rotate(360deg);
+  }
+  
+}
+section .right .bg-design{
+  width: 55rem;
+  height: 55rem;
+  background: white;
+  border-radius: 50%;
+}
+section .right .image{
+  position: absolute;
+  width: 50%;
+  top:6rem;
+  left: 0;
+}
+section .right .image img{
+  width: 100%;
+}
